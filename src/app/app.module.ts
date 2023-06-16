@@ -16,6 +16,11 @@ import { CuentasPresupuestoComponent } from './components/cuentas-presupuesto/cu
 import { CuentasContabilidadComponent } from './components/cuentas-contabilidad/cuentas-contabilidad.component';
 
 import { RevisorComponent } from './components/compromiso/revisor/revisor.component';
+import { DisponibilidadComponent } from './components/disponibilidad/disponibilidad.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DialogComponent } from './components/dialog/dialog.component';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -30,12 +35,17 @@ import { RevisorComponent } from './components/compromiso/revisor/revisor.compon
     ReservasCuentasComponent,
     CuentasPresupuestoComponent,
     CuentasContabilidadComponent,
-    RevisorComponent
+    RevisorComponent,
+    DisponibilidadComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    MatDialogModule,
+    HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

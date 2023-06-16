@@ -9,6 +9,7 @@ import { ReservasCuentasComponent } from './components/reservas-cuentas/reservas
 import { CuentasPresupuestoComponent } from './components/cuentas-presupuesto/cuentas-presupuesto.component';
 import { CuentasContabilidadComponent } from './components/cuentas-contabilidad/cuentas-contabilidad.component';
 import { RevisorComponent } from './components/compromiso/revisor/revisor.component';
+import { DisponibilidadComponent } from './components/disponibilidad/disponibilidad.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'cuentas-presupuesto', component: CuentasPresupuestoComponent },
   { path: 'cuentas-contabilidad', component: CuentasContabilidadComponent },
   { path: 'revision', component: RevisorComponent },
+  { path: 'disponibilidad', component: DisponibilidadComponent },
 
 ];
 

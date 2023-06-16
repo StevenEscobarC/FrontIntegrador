@@ -1,0 +1,132 @@
+<div class="availability-container">
+  <h1>Disponibilidad Presupuestal</h1>
+
+  <div class="buttons-container">
+    <button
+      type="button"
+      [class.active]="solicitudCdp"
+      (click)="toggleForm('cdp')"
+    >
+      Solicitar CDP
+    </button>
+    <button
+      type="button"
+      [class.active]="solicitudReintegro"
+      (click)="toggleForm('reintegro')"
+    >
+      Solicitar Reintegro de CDP
+    </button>
+  </div>
+
+  <div class="form-container">
+    <form>
+      <div *ngIf="solicitudCdp" class="form-group">
+        <h2>Registrar solicitud de disponibilidad presupuestal</h2>
+      </div>
+      <div *ngIf="solicitudCdp" class="form-group">
+        <label>Fecha de registro *</label>
+        <input
+          type="date"
+          name="fechaRegistro"
+          required
+          [(ngModel)]="fechaSeleccionada"
+        />
+      </div>
+      <div *ngIf="solicitudCdp" class="form-group">
+        <label>Dependencias de bienes y servicios</label>
+        <button type="button" (click)="openSearchDialog()">Buscar</button>
+      </div>
+      <div *ngIf="solicitudReintegro" class="form-group">
+        <h2>Registrar solicitud de reintegro presupuestal</h2>
+      </div>
+      <div *ngIf="solicitudReintegro" class="form-group">
+        <label>Fecha de registro *</label>
+        <input
+          type="date"
+          name="fechaRegistro"
+          required
+          [(ngModel)]="fechaSeleccionada"
+        />
+      </div>
+      <div *ngIf="solicitudReintegro" class="form-group">
+        <label>Consecutivo de documento por clasificar</label>
+        <input type="text" name="buscar" class="search-input" />
+        <button type="button">Buscar</button>
+      </div>
+
+      <div *ngIf="solicitudReintegro">
+        <table class="dependency-table">
+          <thead>
+            <tr>
+              <th>Dependencias para agectación de gastos</th>
+              <th>Posición del catálogo de gastos</th>
+              <th>Saldo disponible para reintegrar</th>
+              <th>Valor a reintegrar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let elemento of reintegro">
+              <td>{{ elemento.dependencia }}</td>
+              <td>{{ elemento.gastos }}</td>
+              <td>{{ elemento.valor }}</td>
+              <td>
+                <input type="text" name="valor" [(ngModel)]="elemento.valorR" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div *ngIf="solicitudReintegro" class="form-group">
+        <button type="button" (click)="crearR()">Guardar</button>
+      </div>
+
+      <div *ngIf="solicitudCdp">
+        <table class="dependency-table">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Nombre</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let elemento of elementosSeleccionados">
+              <td>{{ elemento.identificacion }}</td>
+              <td>{{ elemento.nombre }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div *ngIf="elementosSeleccionados.length > 0" class="form-group">
+        <button type="button" (click)="openSearchDialogGastos()">
+          Seleccionar posiciones de gastos
+        </button>
+      </div>
+      <div *ngIf="elementosSeleccionados.length > 0" class="form-group">
+        <table class="dependency-table">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Nombre</th>
+              <th>Valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let elemento of elementosSeleccionados2">
+              <td>{{ elemento.identificacion }}</td>
+              <td>{{ elemento.nombre }}</td>
+              <td>
+                <input type="text" name="valor" [(ngModel)]="elemento.valor" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="elementosSeleccionados2.length > 0" class="form-group">
+        <button type="button" (click)="limpiar()">Limpiar</button>
+        <button type="button" (click)="crear()">Crear</button>
+      </div>
+    </form>
+  </div>
+</div>
