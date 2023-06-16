@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Página de ejemplo</title>
+  <title>Apropiacion inicial de presupuesto</title>
   <style>
     body {
       text-align: center;
@@ -33,7 +33,7 @@
   </style>
 </head>
 <body>
-  <h1>Título centrado</h1>
+  <h1>Apropiacion inicial de presupuesto</h1>
   
   <div class="search-bar">
     <input type="text" placeholder="Buscar">
@@ -47,31 +47,20 @@
     
   </div>
   
-  <table>
+  <table *ngIf="datos">
     <thead>
       <tr>
-        <th>Encabezado 1</th>
-        <th>Encabezado 2</th>
-        <th>Encabezado 3</th>
+        <th>Concepto</th>
+        <th>Fuentes</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Dato 1</td>
-        <td>Dato 2</td>
-        <td>Dato 3</td>
-      </tr>
-      <tr>
-        <td>Dato 4</td>
-        <td>Dato 5</td>
-        <td>Dato 6</td>
-      </tr>
-      <tr>
-        <td>Dato 7</td>
-        <td>Dato 8</td>
-        <td>Dato 9</td>
+      <tr *ngFor="let dato of datos">
+        <td>{{ dato.Concepto }}</td>
+        <td>{{ dato.Fuentes }}</td>
       </tr>
     </tbody>
   </table>
+  
 </body>
 </html>

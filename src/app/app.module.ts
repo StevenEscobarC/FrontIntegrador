@@ -15,6 +15,7 @@ import { ReservasCuentasComponent } from './components/reservas-cuentas/reservas
 import { CuentasPresupuestoComponent } from './components/cuentas-presupuesto/cuentas-presupuesto.component';
 import { CuentasContabilidadComponent } from './components/cuentas-contabilidad/cuentas-contabilidad.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

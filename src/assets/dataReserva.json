@@ -1,0 +1,35 @@
+[
+  {
+    "Nombre": "Gobernación de Cundinamarca",
+    "Contrato": "7126715271",
+    "FechaInicio": "01/01/2019",
+    "FechaTerminacion": "12/31/2019",
+    "Compromiso": "Compra de bienes y servicios",
+    "ValorTotal": "7126715271",
+    "ValorEjecutado": "7126715271",
+    "Reserva": "7126",
+    "Cuentas": "No"
+  },
+  {
+    "Nombre": "Ministerio de Educación",
+    "Contrato": "1234567890",
+    "FechaInicio": "01/01/2022",
+    "FechaTerminacion": "12/31/2022",
+    "Compromiso": "Servicios de capacitación",
+    "ValorTotal": "500000000",
+    "ValorEjecutado": "350000000",
+    "Reserva": "150000000",
+    "Cuentas": "Sí"
+  },
+  {
+    "Nombre": "Alcaldía de Bogotá",
+    "Contrato": "987654321",
+    "FechaInicio": "01/01/2023",
+    "FechaTerminacion": "12/31/2023",
+    "Compromiso": "Obra pública",
+    "ValorTotal": "1000000000",
+    "ValorEjecutado": "500000000",
+    "Reserva": "500000000",
+    "Cuentas": "Sí"
+  }
+]
