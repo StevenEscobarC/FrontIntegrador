@@ -1,1 +1,66 @@
-<p>revisor works!</p>
+<div class="file-list">
+    <h3>Archivos cargados</h3>
+    <ul>
+      <li *ngFor="let file of files; let i = index">
+        <span class="file-info">{{ file['nombre_archivo'] }}</span>
+        <span class="file-actions">
+          <button (click)="find(file)" class="btn btn-info">Revisar</button>
+          <button (click)="openModal()" class="btn btn-warning">Corregir</button>
+          <button class="btn btn-primary" (click)="openModal2()">Aceptar y enviar</button>
+            
+        </span>
+      </li>
+    </ul>
+  </div>
+
+<!-- Modal -->
+<div class="modal" tabindex="-1" role="dialog" [ngClass]="{ 'show': isCorrOpen }" style="display: block;" *ngIf="isCorrOpen">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!-- Encabezado del modal -->
+      <div class="modal-header">
+        <h5 class="modal-title">Envio de correciones</h5>
+        
+        <button type="button" class="close" (click)="closeModal()">
+          <span>&times;</span>
+        </button>
+      </div>
+      <!-- Contenido del modal -->
+      <div class="modal-body">
+        <!-- Contenido del modal aquí -->
+        <textarea class="form-control" rows="5" placeholder="Mensaje de correcion"></textarea>
+
+      </div>
+      <!-- Pie del modal -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeModal()">Cerrar</button>
+        <button type="button" class="btn btn-primary" (click)="closeModal()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Fondo oscuro del modal -->
+<div class="modal-backdrop fade show"*ngIf="isOpen" ></div>
+<!-- Modal -->
+<div class="modal" tabindex="-1" role="dialog" [ngClass]="{ 'show': isCoOpen }" style="display: block;" *ngIf="isCoOpen">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- Encabezado del modal -->
+        <div class="modal-header">
+          <h5 class="modal-title">¿A donde enviar comprmiso?</h5>
+          <button type="button" class="close" (click)="closeModal2()">
+            <span>&times;</span>
+          </button>
+        </div>
+        <!-- Contenido del modal -->
+        
+        <!-- Pie del modal -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="closeModal2()">Central de cuentas</button>
+          <button type="button" class="btn btn-primary" (click)="closeModal2()">Causacion</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
