@@ -1,8 +1,8 @@
 <div class="container">
     <h3>Subir archivo</h3>
     <form (submit)="uploadFile($event)">
-      <input type="file" (change)="onFileSelected($event)" accept=".pdf,.doc,.docx" />
-      <button type="submit">Subir</button>
+      <input type="file"  (change)="onFileSelected($event)" accept=".pdf,.doc,.docx" />
+      <button type="submit" class="btn btn-success">Subir</button>
     </form>
   
     <div class="file-list">
@@ -14,7 +14,7 @@
         </li>
       </ul>
     </div>
-    <button (click)="uploadAll()">Enviar a revision</button>
+    <button (click)="uploadAll()">Enviar a e</button>
   </div>
 
   
