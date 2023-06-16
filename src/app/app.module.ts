@@ -15,6 +15,7 @@ import { ReservasCuentasComponent } from './components/reservas-cuentas/reservas
 import { CuentasPresupuestoComponent } from './components/cuentas-presupuesto/cuentas-presupuesto.component';
 import { CuentasContabilidadComponent } from './components/cuentas-contabilidad/cuentas-contabilidad.component';
 
+import { RevisorComponent } from './components/compromiso/revisor/revisor.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CuentasContabilidadComponent } from './components/cuentas-contabilidad/
     ApropiacionComponent,
     ReservasCuentasComponent,
     CuentasPresupuestoComponent,
-    CuentasContabilidadComponent
+    CuentasContabilidadComponent,
+    RevisorComponent
   ],
   imports: [
     BrowserModule,

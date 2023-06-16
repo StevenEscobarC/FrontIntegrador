@@ -14,6 +14,9 @@ export class CompromisoComponent implements OnInit {
   constructor(private crud:CrudService) { }
 
   ngOnInit(): void {
+    this.fileList = [];
+    this.files = [];
+    this.selectedFile = null;
   }
   public selectedFile: File | null = null;
   public fileList: UploadedFile[] = [];
@@ -48,9 +51,11 @@ export class CompromisoComponent implements OnInit {
     formData.append('file', file);
     formData.append('ruta', "/compromiso/");
     this.crud.create("upload",formData).subscribe((res:any)=>{
-      console.log(res);
+    console.log(res);
+
     })});
-   
+    alert("Archivos subidos correctamente");
+    this.ngOnInit();
   }
 
 }

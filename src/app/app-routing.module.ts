@@ -8,6 +8,7 @@ import { ApropiacionComponent } from './components/apropiacion/apropiacion.compo
 import { ReservasCuentasComponent } from './components/reservas-cuentas/reservas-cuentas.component';
 import { CuentasPresupuestoComponent } from './components/cuentas-presupuesto/cuentas-presupuesto.component';
 import { CuentasContabilidadComponent } from './components/cuentas-contabilidad/cuentas-contabilidad.component';
+import { RevisorComponent } from './components/compromiso/revisor/revisor.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'reservas-cuentas', component: ReservasCuentasComponent },
   { path: 'cuentas-presupuesto', component: CuentasPresupuestoComponent },
   { path: 'cuentas-contabilidad', component: CuentasContabilidadComponent },
+  { path: 'revision', component: RevisorComponent },
 
 ];
 
