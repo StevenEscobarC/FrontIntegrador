@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudService } from 'src/app/backend/cruds/crud.service';
-
 interface UploadedFile {
   name: string;
   size: number;
@@ -8,11 +7,11 @@ interface UploadedFile {
 }
 
 @Component({
-  selector: 'app-reservas-presupuestales',
-  templateUrl: './reservas-presupuestales.component.html',
-  styleUrls: ['./reservas-presupuestales.component.css']
+  selector: 'app-apropiacion',
+  templateUrl: './apropiacion.component.html',
+  styleUrls: ['./apropiacion.component.css']
 })
-export class ReservasPresupuestalesComponent  implements OnInit{
+export class ApropiacionComponent implements OnInit {
   constructor(private crud:CrudService) { }
   ngOnInit(): void {
   }

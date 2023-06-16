@@ -34,12 +34,26 @@
     </style>
   </head>
   <body>
-    <h1>Saldos</h1>
+    <h1>Cuentas contabilidad</h1>
 
-    <div class="search-bar">
-      <input type="text" placeholder="Buscar" />
+    <div class="row">
+      <div class="col-4">
+        <div class="search-bar">
+          <input type="text" placeholder="Buscar" />
+        </div>
+      </div>
+      <div class="col-4 mt-3">
+        Periodo
+        <select>
+          <option value="option1">1</option>
+          <option value="option2">2</option>
+          <option value="option3">3</option>
+        </select>
+      </div>
+      <div class="col-4 button-container">
+        <button>Cerrar periodo</button>
+      </div>
     </div>
-
     <div class="button-container">
       <button>Generar reporte</button>
     </div>
@@ -52,6 +66,7 @@
           <th>Centro de gasto</th>
           <th>Saldo</th>
           <th>Fecha solicitud</th>
+          <th>Fecha tramitada</th>
           <th>Acciones</th>
         </tr>
       </thead>
@@ -62,11 +77,12 @@
           <td>{{ saldo.centroG }}</td>
           <td>{{ saldo.saldo }}</td>
           <td>{{ saldo.fechaSolicitud }}</td>
+          <td>{{ saldo.fechaTramitada }}</td>
           <td>
             <button>Ver</button>
-            <button *ngIf="saldo.estado!='Cerrada'">Editar</button>
-            <button *ngIf="saldo.estado!='Cerrada'">Eliminar</button>
-            <button *ngIf="saldo.estado!='Cerrada'">Cerrar</button>
+            <button *ngIf="saldo.estado != 'Tramitada'">Editar</button>
+            <button *ngIf="saldo.estado != 'Tramitada'">Eliminar</button>
+            <button *ngIf="saldo.estado != 'Tramitada'">Tramitar</button>
           </td>
         </tr>
       </tbody>

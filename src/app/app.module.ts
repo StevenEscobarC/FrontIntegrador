@@ -10,6 +10,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CierrePresupuestalComponent } from './components/cierre-presupuestal/cierre-presupuestal.component';
 import { ReservasPresupuestalesComponent } from './components/reservas-presupuestales/reservas-presupuestales.component';
 import { CompromisoComponent } from './components/compromiso/compromiso.component';
+import { ApropiacionComponent } from './components/apropiacion/apropiacion.component';
+import { ReservasCuentasComponent } from './components/reservas-cuentas/reservas-cuentas.component';
+import { CuentasPresupuestoComponent } from './components/cuentas-presupuesto/cuentas-presupuesto.component';
+import { CuentasContabilidadComponent } from './components/cuentas-contabilidad/cuentas-contabilidad.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { CompromisoComponent } from './components/compromiso/compromiso.componen
     FooterComponent,
     CierrePresupuestalComponent,
     ReservasPresupuestalesComponent,
-    CompromisoComponent
+    CompromisoComponent,
+    ApropiacionComponent,
+    ReservasCuentasComponent,
+    CuentasPresupuestoComponent,
+    CuentasContabilidadComponent
   ],
   imports: [
     BrowserModule,

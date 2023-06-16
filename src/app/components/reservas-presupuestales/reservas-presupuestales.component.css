@@ -9,6 +9,7 @@ body {
   }
   
   .search-bar {
+    padding-left: 80px;
     margin-top: 20px;
     text-align: right;
   }
@@ -20,6 +21,7 @@ body {
   }
   
   .button-container {
+    padding-left: 80px;
     margin-top: 20px;
     text-align: right;
   }

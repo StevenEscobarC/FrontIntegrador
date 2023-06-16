@@ -34,7 +34,7 @@
     </style>
   </head>
   <body>
-    <h1>Saldos</h1>
+    <h1>Reservas presupuestales, cuentas por pagar y vigencias futuras</h1>
 
     <div class="search-bar">
       <input type="text" placeholder="Buscar" />
@@ -48,25 +48,29 @@
       <thead>
         <tr>
           <th>N°</th>
+          <th>Centro</th>
           <th>Estado</th>
-          <th>Centro de gasto</th>
-          <th>Saldo</th>
-          <th>Fecha solicitud</th>
+          <th>Contra</th>
+          <th>Fecha d</th>
+          <th>Fecha ter</th>
+          <th>Valor C</th>
           <th>Acciones</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let saldo of data">
           <td>{{ saldo.id }}</td>
+          <td>{{ saldo.centro }}</td>
           <td>{{ saldo.estado }}</td>
-          <td>{{ saldo.centroG }}</td>
-          <td>{{ saldo.saldo }}</td>
-          <td>{{ saldo.fechaSolicitud }}</td>
+          <td>{{ saldo.contra }}</td>
+          <td>{{ saldo.fechaD }}</td>
+          <td>{{ saldo.fechaT }}</td>
+          <td>{{ saldo.valor }}</td>
           <td>
             <button>Ver</button>
-            <button *ngIf="saldo.estado!='Cerrada'">Editar</button>
-            <button *ngIf="saldo.estado!='Cerrada'">Eliminar</button>
-            <button *ngIf="saldo.estado!='Cerrada'">Cerrar</button>
+            <button *ngIf="saldo.estado!='Aprovado'">Editar</button>
+            <button *ngIf="saldo.estado!='Aprovado'">Eliminar</button>
+            <button *ngIf="saldo.estado!='Aprovado'">Aprovar</button>
           </td>
         </tr>
       </tbody>
