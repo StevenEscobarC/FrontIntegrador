@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CompromisoComponent } from './components/compromiso/compromiso.component';
+import { RevisorComponent } from './components/compromiso/revisor/revisor.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CompromisoComponent } from './components/compromiso/compromiso.componen
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    CompromisoComponent
+    CompromisoComponent,
+    RevisorComponent
   ],
   imports: [
     BrowserModule,

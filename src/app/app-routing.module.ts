@@ -6,6 +6,8 @@ import { CompromisoComponent } from './components/compromiso/compromiso.componen
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'compromiso', component: CompromisoComponent },
+  { path: 'revision', component: CompromisoComponent },
+
 ];
 
 @NgModule({
