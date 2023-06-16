@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ReservasPresupuestalesComponent } from './components/reservas-presupuestales/reservas-presupuestales.component';
 import { CompromisoComponent } from './components/compromiso/compromiso.component';
+import { ApropiacionComponent } from './components/apropiacion/apropiacion.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CompromisoComponent } from './components/compromiso/compromiso.componen
     NavbarComponent,
     FooterComponent,
     ReservasPresupuestalesComponent,
-    CompromisoComponent
+    CompromisoComponent,
+    ApropiacionComponent
   ],
   imports: [
     BrowserModule,
