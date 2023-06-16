@@ -47,29 +47,32 @@
     
   </div>
   
-  <table>
+  <table *ngIf="datos">
     <thead>
       <tr>
-        <th>Encabezado 1</th>
-        <th>Encabezado 2</th>
-        <th>Encabezado 3</th>
+        <th>Nombre</th>
+        <th>Contrato</th>
+         <th>FechaInicio</th>
+        <th>FechaTerminacion</th>
+         <th>Compromiso</th>
+        <th>ValorTotal</th>
+         <th>ValorEjecutado</th>
+        <th>Reserva</th>
+         <th>Cuentas</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Dato 1</td>
-        <td>Dato 2</td>
-        <td>Dato 3</td>
-      </tr>
-      <tr>
-        <td>Dato 4</td>
-        <td>Dato 5</td>
-        <td>Dato 6</td>
-      </tr>
-      <tr>
-        <td>Dato 7</td>
-        <td>Dato 8</td>
-        <td>Dato 9</td>
+      <tr *ngFor="let dato of datos">
+        <td>{{ dato.Nombre }}</td>
+        <td>{{ dato.Contrato }}</td>
+        <td>{{ dato.FechaInicio }}</td>
+        <td>{{ dato.FechaTerminacion }}</td>
+        <td>{{ dato.Compromiso }}</td>
+        <td>{{ dato.ValorTotal }}</td>
+        <td>{{ dato.ValorEjecutado }}</td>
+        <td>{{ dato.Reserva }}</td>
+        <td>{{ dato.Cuentas }}</td>
+        
       </tr>
     </tbody>
   </table>
