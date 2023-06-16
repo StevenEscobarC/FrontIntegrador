@@ -11,6 +11,7 @@ import { ReservasPresupuestalesComponent } from './components/reservas-presupues
 import { CompromisoComponent } from './components/compromiso/compromiso.component';
 import { ApropiacionComponent } from './components/apropiacion/apropiacion.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
